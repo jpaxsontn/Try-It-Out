@@ -14,7 +14,13 @@ namespace Pg_78
     {
         static void Main(string[] args)
         {
-            PrintPyramid(11);
+            var pyramidHeight = 5;
+            if(args.Count() > 0)
+            {
+                Int32.TryParse(args[0], out pyramidHeight);
+            }
+
+            PrintPyramid(pyramidHeight);
             Console.ReadLine();
         }
 
