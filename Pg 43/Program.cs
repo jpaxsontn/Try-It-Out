@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pg_43
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -21,7 +21,7 @@ namespace Pg_43
             ShowExit();
         }
 
-        static void ShowExit()
+        public static void ShowExit()
         {
             Console.WriteLine("Press any key to exit");
             Console.ReadLine();

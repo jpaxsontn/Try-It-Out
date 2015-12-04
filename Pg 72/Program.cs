@@ -17,8 +17,17 @@ namespace Pg_72
             var numberTwo = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Enter an operation +, -, *, /, %, ^");
             var operation = Console.ReadLine();
-            var result = 0;
 
+            var result = Resultant(numberOne, numberTwo, operation);
+
+            Console.WriteLine("Result of " + numberOne + " " + operation + " " + numberTwo + " = " + result);
+            ShowExit();
+        }
+
+
+        public static int Resultant(int numberOne, int numberTwo, string operation)
+        {
+            int result = 0;
             switch (operation)
             {
                 case "+":
@@ -41,8 +50,7 @@ namespace Pg_72
                     break;
             }
 
-            Console.WriteLine("Result of " + numberOne + " " + operation + " " + numberTwo + " = " + result);
-            ShowExit();
+            return result;
         }
 
         private static void ShowExit()
